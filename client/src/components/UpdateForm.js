@@ -12,7 +12,7 @@ const initialMovie = {
     const [movie, setMovie] = useState(initialMovie);
     useEffect(() => {
       const id = props.match.params.id;
-      const movieInArr = props.movie.find(movie => `${movie.id}` === id);
+      const movieInArr = props.movies.find(movie => `${movie.id}` === id);
       if (movieInArr) setMovie(movieInArr);
     }, [props.movies, props.match.params.id]);
   
